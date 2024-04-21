@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Border Web Page</title>
+    <style>
+        /* Set the background color to black */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+        }
+
+        /* Create a glowing border effect */
+        body::before {
+            content: "glowing   ";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            border: 5px solid transparent;
+            border-image: linear-gradient(45deg, #da0581, #0ce5e1, #09f16e);
+            border-image-slice: 1;
+            animation: glow 3s infinite alternate;
+        }
+
+        /* Optional animation for pulsating glow */
+        @keyframes glow {
+            0% {
+                border-width: 5px;
+            }
+            100% {
+                border-width: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Your page content goes here -->
+    <h1>Welcome to My Glowing Border Web Page!</h1>
+    <p>This page has a glowing border effect.</p>
+</body>
+</html>
